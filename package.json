@@ -8,6 +8,13 @@
   "source": "src/index.ts",
   "author": "Yuchen Liu",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:liuyuchenzh/use-event-hook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/liuyuchenzh/use-event-hook/issues"
+  },
   "dependencies": {
     "@types/react": "^16.8.8",
     "react": "^16.8.4"
@@ -26,7 +33,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "tslint --fix . && pretty-quick --staged"
     }
   }
 }
