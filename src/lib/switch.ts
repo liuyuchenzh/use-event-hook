@@ -6,7 +6,7 @@ interface SwitchEffectOption extends EventEffectOption {
 }
 
 export function useSwitchEffect(option: SwitchEffectOption) {
-  const { target, eventName, effects, deps = [], switchKey } = option;
+  const { target, eventName, effects, switchKey, deps = [switchKey] } = option;
   useEffect(() => {
     const listener = (e: Event) => {
       effects(e, ...deps);
