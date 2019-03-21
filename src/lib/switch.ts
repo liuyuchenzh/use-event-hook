@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { EventEffectOption } from "./interface";
 
 interface SwitchEffectOption extends EventEffectOption {
-  switchKey: boolean;
+  switchKey: any;
 }
 
 export function useSwitchEffect(option: SwitchEffectOption) {
