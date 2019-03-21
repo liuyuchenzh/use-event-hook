@@ -1,0 +1,32 @@
+{
+  "name": "use-event-hook",
+  "version": "1.0.0",
+  "description": "useEffect with DOM event",
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.js",
+  "module": "dist/index.mjs",
+  "source": "src/index.ts",
+  "author": "Yuchen Liu",
+  "license": "MIT",
+  "dependencies": {
+    "@types/react": "^16.8.8",
+    "react": "^16.8.4"
+  },
+  "devDependencies": {
+    "husky": "^1.3.1",
+    "microbundle": "^0.11.0",
+    "prettier": "^1.16.4",
+    "pretty-quick": "^1.10.0",
+    "tslint": "^5.14.0"
+  },
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "format": "pretty-quick"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
