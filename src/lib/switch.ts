@@ -1,13 +1,19 @@
-import { useEffect } from "react";
+import React from "react";
 import { EventEffectOption } from "./interface";
 
 interface SwitchEffectOption extends EventEffectOption {
   switchKey: any;
 }
 
-export function useSwitchEffect(option: SwitchEffectOption) {
+export function useSwitchEffect(
+  useEffect: typeof React.useEffect,
+  option: SwitchEffectOption
+) {
   const { target, eventName, effects, switchKey, deps = [switchKey] } = option;
   useEffect(() => {
+    if (!target) {
+      return;
+    }
     const listener = (e: Event) => {
       effects(e, ...deps);
     };

@@ -4,7 +4,9 @@
   "jsRules": {},
   "rules": {
     "prettier": [true, ".prettierrc"],
-    "interface-name": false
+    "interface-name": false,
+    "trailing-comma": false,
+    "arrow-parens": false
   },
   "rulesDirectory": []
 }

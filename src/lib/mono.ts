@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React from "react";
 import { EventEffectOption } from "./interface";
 
 interface MonoEffectOption extends EventEffectOption {
@@ -15,9 +15,15 @@ interface MonoCache {
 
 const monoCache: MonoCache = {};
 
-export function useMonoEffect(option: MonoEffectOption) {
+export function useMonoEffect(
+  useEffect: typeof React.useEffect,
+  option: MonoEffectOption
+) {
   const { uid, target, eventName, deps = [], effects } = option;
   useEffect(() => {
+    if (!target) {
+      return;
+    }
     const hasDeclared: boolean = uid in monoCache;
     if (!hasDeclared) {
       monoCache[uid] = {
