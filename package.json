@@ -17,7 +17,7 @@
     "url": "https://github.com/liuyuchenzh/use-event-hook/issues"
   },
   "dependencies": {
-    "@types/react": "^16.8.8"
+    "@types/react": "^16.8.13"
   },
   "devDependencies": {
     "husky": "^1.3.1",
@@ -25,7 +25,7 @@
     "microbundle": "^0.11.0",
     "prettier": "^1.16.4",
     "pretty-quick": "^1.10.0",
-    "tslint": "^5.14.0",
+    "tslint": "^5.15.0",
     "tslint-plugin-prettier": "^2.0.1"
   },
   "scripts": {
