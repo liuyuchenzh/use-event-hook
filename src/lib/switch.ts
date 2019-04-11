@@ -3,13 +3,21 @@ import { EventEffectOption } from "./interface";
 
 interface SwitchEffectOption extends EventEffectOption {
   switchKey: any;
+  async?: boolean;
 }
 
 export function useSwitchEffect(
   useEffect: typeof React.useEffect,
   option: SwitchEffectOption
 ) {
-  const { target, eventName, effects, switchKey, deps = [switchKey] } = option;
+  const {
+    target,
+    eventName,
+    effects,
+    switchKey,
+    deps = [switchKey],
+    async = false
+  } = option;
   useEffect(() => {
     if (!target) {
       return;
@@ -17,10 +25,21 @@ export function useSwitchEffect(
     const listener = (e: Event) => {
       effects(e, ...deps);
     };
-    if (switchKey) {
-      target.addEventListener(eventName, listener);
-    } else {
+    const addEventListener = () => target.addEventListener(eventName, listener);
+    const removeEventListener = () =>
       target.removeEventListener(eventName, listener);
+    if (switchKey) {
+      if (async) {
+        setTimeout(addEventListener, 0);
+      } else {
+        addEventListener();
+      }
+    } else {
+      if (async) {
+        setTimeout(removeEventListener, 0);
+      } else {
+        removeEventListener();
+      }
     }
     // always remove listener
     return () => {

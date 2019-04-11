@@ -63,6 +63,7 @@ Register a event listener on `target` for `eventName` typeof event whenever the 
 ```ts
 interface Option<T = any> {
   switchKey: any; // from state or props
+  async?: boolean; // make sure effects are called after "side effects" actually happened (caused by updating deps)
   target: HTMLElement | Window | Document;
   eventName: string;
   deps?: T[];
