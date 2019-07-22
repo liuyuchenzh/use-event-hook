@@ -6,10 +6,7 @@ interface SwitchEffectOption extends EventEffectOption {
   async?: boolean;
 }
 
-export function useSwitchEffect(
-  useEffect: typeof React.useEffect,
-  option: SwitchEffectOption
-) {
+export function useSwitchEffect(option: SwitchEffectOption) {
   const {
     target,
     eventName,
@@ -18,7 +15,7 @@ export function useSwitchEffect(
     deps = [switchKey],
     async = false
   } = option;
-  useEffect(() => {
+  React.useEffect(() => {
     if (!target) {
       return;
     }

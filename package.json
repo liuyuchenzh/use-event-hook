@@ -17,9 +17,10 @@
     "url": "https://github.com/liuyuchenzh/use-event-hook/issues"
   },
   "dependencies": {
-    "@types/react": "^16.8.23"
+    "react": "^16.8.6"
   },
   "devDependencies": {
+    "@types/react": "^16.8.23",
     "husky": "^3.0.0",
     "lint-staged": "^9.2.0",
     "microbundle": "^0.11.0",

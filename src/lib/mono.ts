@@ -15,12 +15,9 @@ interface MonoCache {
 
 const monoCache: MonoCache = {};
 
-export function useMonoEffect(
-  useEffect: typeof React.useEffect,
-  option: MonoEffectOption
-) {
+export function useMonoEffect(option: MonoEffectOption) {
   const { uid, target, eventName, deps = [], effects } = option;
-  useEffect(() => {
+  React.useEffect(() => {
     if (!target) {
       return;
     }
