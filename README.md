@@ -12,11 +12,9 @@ npm i D use-event-hook
 
 ## Usage
 
-> `useEffect` could just be an implementation of `React.useEffect`'s concept.
-
 ```ts
 import { useMonoEffect, useSwitchEffect } from "use-event-hook";
-useMonoEffect(useEffect, {
+useMonoEffect({
   uid: "componentResize",
   eventName: "resize",
   target: window,
@@ -26,7 +24,7 @@ useMonoEffect(useEffect, {
   }
 });
 
-useSwitchEffect(useEffect, {
+useSwitchEffect({
   eventName: "click",
   target: document.body,
   switchKey: someState,
