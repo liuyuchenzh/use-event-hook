@@ -16,16 +16,14 @@
   "bugs": {
     "url": "https://github.com/liuyuchenzh/use-event-hook/issues"
   },
-  "dependencies": {
-    "react": "^16.8.6"
-  },
   "devDependencies": {
-    "@types/react": "^16.8.23",
-    "husky": "^3.0.0",
-    "lint-staged": "^9.2.0",
+    "@types/react": "^16.9.2",
+    "husky": "^3.0.4",
+    "lint-staged": "^9.2.3",
     "microbundle": "^0.11.0",
     "prettier": "^1.18.2",
     "pretty-quick": "^1.11.1",
+    "react": "^16.9.0",
     "tslint": "^5.18.0",
     "tslint-plugin-prettier": "^2.0.1"
   },
