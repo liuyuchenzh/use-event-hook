@@ -27,13 +27,13 @@ export function useSwitchEffect(option: SwitchEffectOption) {
       target.removeEventListener(eventName, listener);
     if (switchKey) {
       if (async) {
-        setTimeout(addEventListener, 0);
+        Promise.resolve().then(addEventListener);
       } else {
         addEventListener();
       }
     } else {
       if (async) {
-        setTimeout(removeEventListener, 0);
+        Promise.resolve().then(removeEventListener);
       } else {
         removeEventListener();
       }
