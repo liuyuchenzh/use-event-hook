@@ -7,6 +7,7 @@
   "module": "dist/index.m.js",
   "source": "src/index.ts",
   "typings": "dist/index.d.ts",
+  "files": ["dist"],
   "author": "Yuchen Liu",
   "license": "MIT",
   "repository": {
@@ -39,9 +40,6 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
-      "tslint --fix",
-      "git add"
-    ]
+    "*.{ts,tsx}": ["tslint --fix", "git add"]
   }
 }
