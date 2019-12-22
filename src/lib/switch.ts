@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect } from "react";
 import { EventEffectOption } from "./interface";
 
 interface SwitchEffectOption extends EventEffectOption {
@@ -15,7 +15,7 @@ export function useSwitchEffect(option: SwitchEffectOption) {
     deps = [switchKey],
     async = false
   } = option;
-  React.useEffect(() => {
+  useEffect(() => {
     if (!target) {
       return;
     }
