@@ -20,7 +20,7 @@
   "devDependencies": {
     "@types/react": "16.9.36",
     "husky": "4.2.5",
-    "lint-staged": "10.2.9",
+    "lint-staged": "10.2.11",
     "microbundle": "0.12.1",
     "prettier": "2.0.5",
     "pretty-quick": "2.0.1",
