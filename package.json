@@ -22,7 +22,7 @@
     "husky": "4.2.5",
     "lint-staged": "10.2.11",
     "microbundle": "0.12.2",
-    "prettier": "2.0.5",
+    "prettier": "2.7.1",
     "pretty-quick": "2.0.1",
     "react": "16.13.1",
     "tslint": "6.1.2",
